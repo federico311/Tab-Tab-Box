@@ -1,4 +1,4 @@
-// dichiarazione variabili
+
 const int ledRosso  = 4;
 const int ledGiallo = 5;
 const int ledVerde  = 6;
@@ -62,7 +62,7 @@ void avviaTest() {
   Serial.println(F("Listening phase, do not tap"));
 
   faseStart   = millis();
-  ultimaVibro = faseStart - ISI_normale;   // primo beat subito
+  ultimaVibro = faseStart - ISI_normale;   
 
   while (millis() - faseStart < durata_ascolto) {
     gestisciVibrazione();
@@ -78,7 +78,7 @@ void avviaTest() {
   faseStart    = millis();
   ultimaVibro  = faseStart - ISI_normale;
   ultimoTap    = 0;
-  ISI_corrente = ISI_normale;  // questo, come poi nella fase 3, serve a non dover usare due funzioni separate, perchè gestisci vibrazione usa ISI_corrente
+  ISI_corrente = ISI_normale;  
   beatCount    = 0;
 
   while (millis() - faseStart < durata_paced) {
@@ -109,12 +109,12 @@ void gestisciVibrazione() {
   unsigned long ora = millis();
 
   if (!vibroAttivo && (ora - ultimaVibro >= ISI_corrente)) {
-    ultimaVibro += ISI_corrente;  // mantieni isocronia 
+    ultimaVibro += ISI_corrente; 
     vibroAttivo  = true;
     vibroFine    = ora + motore_ON;
     analogWrite(motore, 150);
 
-    // incrementa beat solo durante le fasi con tap (fase 2 e 3)
+   
     if (beatCount >= 0) beatCount++;
   }
 

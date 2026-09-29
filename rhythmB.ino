@@ -65,7 +65,7 @@ void avviaTest() {
     unsigned long ora = millis();
 
     
-    if (!vibroAttivo && (ora - ultimaVibro >= ISI_corrente)) {  // fa un nuovo beat 
+    if (!vibroAttivo && (ora - ultimaVibro >= ISI_corrente)) {  
       ultimaVibro += ISI_corrente;
       vibroAttivo  = true;
       vibroFine    = ora + motore_ON;
@@ -73,7 +73,7 @@ void avviaTest() {
       beatCount++;
 
     
-      ISI_corrente = (ISI_corrente == ISI_corto) ? ISI_lungo : ISI_corto;  // alterna ISI
+      ISI_corrente = (ISI_corrente == ISI_corto) ? ISI_lungo : ISI_corto;  
     }
 
   
@@ -87,7 +87,7 @@ void avviaTest() {
       ultimoTap = ora;
 
       
-      int statoMotore = vibroAttivo ? 1 : 0;  // stato motore: 1 se sta vibrando, 0 se è spento
+      int statoMotore = vibroAttivo ? 1 : 0;  
 
       unsigned long timestamp = ora - testStart;
 

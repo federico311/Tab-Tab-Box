@@ -1,2 +1,3 @@
-# Tab-Tab-Box
-Codes relating to the development and design of the device
+# Tap-Tap-Box
+Codici relativi alla progettazione e allo sviluppo del dispositivo.
+Laurea in Ingegneria Gestionale, Università degli studi di Siena, a.a. 2025/2026.

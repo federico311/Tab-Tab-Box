@@ -13,7 +13,7 @@ const unsigned long motore_ON          = 80UL;
 const unsigned long ISI_normale        = 1000UL;  // 60 BPM
 const unsigned long ISI_perturbato     = 833UL;  // 72 BPM
 const int           soglia_piezo       = 100;
-const unsigned long debounce_ms        = 400UL;
+const unsigned long debounce_ms        = 300UL;
 
 unsigned long faseStart   = 0;
 unsigned long ultimaVibro = 0;
